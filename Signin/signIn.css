@@ -1,0 +1,26 @@
+
+.container{
+    display: grid;
+    background: antiquewhite;
+    position: absolute;
+    left: 5vw;
+    top: 5vh;
+    width: 90vw;
+    height: 90vh;
+    grid-template-rows: 15% 79%;
+    grid-row-gap: 5%;
+    align-content: center;
+    /*justify-content: center;*/
+}
+.header{
+    position: relative;
+    width: 100%;
+    background: darkorange;
+    text-align: center;
+    font-size: 3vmin;
+}
+.main{
+    position: relative;
+    background: lightgreen;
+    width: 100%;
+}
