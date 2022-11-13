@@ -1,4 +1,10 @@
 
+::selection{
+    background: transparent;
+}
+::-moz-selection{
+    background: transparent;
+}
 .container{
     display: grid;
     background: antiquewhite;
@@ -21,6 +27,37 @@
 }
 .main{
     position: relative;
+    display: grid;
+    font-size: 4vmin;
+    caret-color: transparent;
+    align-content: center;
+    grid-template-areas:
+    "a b"
+    "c d"
+    ". e";
+    grid-row-gap: 7%;
+    grid-column-gap: 5%;
+    justify-content: center;
     background: lightgreen;
     width: 100%;
+}
+#loginSpace{
+    width: 25vw;
+}
+#passwordSpace{
+    width: 25vw;
+}
+.buttons{
+    grid-area: e;
+    display: flex;
+    justify-self: end;
+    width: 17vw;
+    justify-content: space-between;
+}
+button{
+    width: 8vw;
+    height: 6vh;
+    background: lightseagreen;
+    border-radius: 1000px;
+    font-size: 2vmin;
 }
