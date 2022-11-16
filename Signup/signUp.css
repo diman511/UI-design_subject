@@ -24,7 +24,6 @@ body{
 .header{
     position: relative;
     width: 100%;
-    top: 0;
     background: darkorange;
     text-align: center;
     font-size: 3vmin;
@@ -38,7 +37,8 @@ body{
     grid-template-areas:
     "a b"
     "c d"
-    ". e";
+    "e f"
+    "g h";
     grid-row-gap: 7%;
     grid-column-gap: 5%;
     justify-content: center;
@@ -47,7 +47,6 @@ body{
 }
 #loginSpace{
     width: 25vw;
-    /*font-weight: 40000;*/
 }
 #loginSpace::placeholder{
     color: #212529;
@@ -56,12 +55,15 @@ body{
 #passwordSpace{
     width: 25vw;
 }
-#passwordSpace::placeholder{
+#confirmPasswordSpace{
+    width: 25vw;
+}
+#confirmPasswordSpace::placeholder{
     color: #212529;
     opacity: 0.4;
 }
 .buttons{
-    grid-area: e;
+    grid-area: h;
     display: flex;
     justify-self: end;
     width: 17vw;
@@ -72,5 +74,6 @@ button{
     height: 6vh;
     background: lightseagreen;
     border-radius: 1000px;
+    font-weight: 400;
     font-size: 2vmin;
 }

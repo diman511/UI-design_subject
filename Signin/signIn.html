@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Вход в систему</title>
+    <title>Вход на страницу</title>
     <link rel="stylesheet" href="signIn.css">
 </head>
 <body>
@@ -10,12 +10,12 @@
         <header class="header"><h1>Вход на страницу</h1></header>
         <main class="main">
             <label for="loginSpace">Логин:</label>
-            <input id="loginSpace" type="text" autocomplete="off">
+            <input id="loginSpace" placeholder="Логин, пожалуйста" type="text" autocomplete="off">
             <label for="passwordSpace">Пароль:</label>
-            <input id="passwordSpace" type="password" autocomplete="off">
+            <input id="passwordSpace" placeholder="Пароль, пожалуйста" type="password" autocomplete="off">
             <div class="buttons">
                 <button onclick="">Ок</button>
-                <button onclick="">Отмена</button>
+                <button onclick="window.location.href='../index.html'">Отмена</button>
             </div>
         </main>
     </div>
