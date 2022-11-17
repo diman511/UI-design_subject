@@ -48,6 +48,7 @@ body{
 #loginSpace{
     width: 25vw;
     /*font-weight: 40000;*/
+    font-size: 16px;
 }
 #loginSpace::placeholder{
     color: #212529;
@@ -55,6 +56,7 @@ body{
 }
 #passwordSpace{
     width: 25vw;
+    font-size: 16px;
 }
 #passwordSpace::placeholder{
     color: #212529;

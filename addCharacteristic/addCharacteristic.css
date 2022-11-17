@@ -8,7 +8,7 @@
 body{
     background: blueviolet;
 }
-.sign-up-page{
+.add-characteristic{
     display: grid;
     background: antiquewhite;
     position: absolute;
@@ -20,14 +20,14 @@ body{
     grid-row-gap: 5%;
     align-content: center;
 }
-.sign-up-page__header{
+.add-characteristic__header{
     position: relative;
     width: 100%;
     background: darkorange;
     text-align: center;
     font-size: 3vmin;
 }
-.sign-up-page__content{
+.add-characteristic__content{
     position: relative;
     display: grid;
     font-size: 4vmin;
@@ -37,6 +37,7 @@ body{
     "a b"
     "c d"
     "e f"
+    ". f"
     "g h";
     grid-row-gap: 7%;
     grid-column-gap: 5%;
@@ -44,31 +45,25 @@ body{
     background: lightgreen;
     width: 100%;
 }
-#loginSpace{
+#subjectSpace{
     width: 25vw;
     font-size: 16px;
 }
-#loginSpace::placeholder{
-    color: #212529;
-    opacity: 0.4;
-}
-#passwordSpace{
+#markSpace{
     width: 25vw;
     font-size: 16px;
 }
-#confirmPasswordSpace{
+#descriptionSpace{
     width: 25vw;
+    grid-area: f;
     font-size: 16px;
 }
-#confirmPasswordSpace::placeholder{
-    color: #212529;
-    opacity: 0.4;
-}
+
 .buttons{
     grid-area: h;
     display: flex;
     justify-self: end;
-    width: 17vw;
+    width: 25vw;
     justify-content: space-between;
 }
 button{

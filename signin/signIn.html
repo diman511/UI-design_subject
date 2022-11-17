@@ -8,16 +8,16 @@
 <body>
     <div class="sign-in-page">
         <header class="sign-in-page__header"><h1>Вход на страницу</h1></header>
-        <main class="sign-in-page__content">
+        <form class="sign-in-page__content" action="">
             <label for="loginSpace">Логин:</label>
-            <input id="loginSpace" placeholder="Логин, пожалуйста" type="text" autocomplete="off">
+            <input id="loginSpace" required placeholder="Логин, пожалуйста" type="text" autocomplete="off">
             <label for="passwordSpace">Пароль:</label>
-            <input id="passwordSpace" placeholder="Пароль, пожалуйста" type="password" autocomplete="off">
+            <input id="passwordSpace" required placeholder="Пароль, пожалуйста" type="password" autocomplete="off">
             <div class="buttons">
-                <button onclick="">Ок</button>
+                <button onclick="" type="submit">Ок</button>
                 <button onclick="window.location.href='../index.html'">Отмена</button>
             </div>
-        </main>
+        </form>
     </div>
 </body>
 </html>

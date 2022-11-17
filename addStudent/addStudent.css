@@ -48,18 +48,23 @@ body{
 }
 #surnameSpace{
     width: 25vw;
+    font-size: 16px;
 }
 #nameSpace{
     width: 25vw;
+    font-size: 16px;
 }
 #patronymicSpace{
     width: 25vw;
+    font-size: 16px;
 }
 #studyingDirSpace{
     width: 25vw;
+    font-size: 16px;
 }
 #durationStudyingSpace{
     width: 25vw;
+    font-size: 16px;
 }
 
 .buttons{

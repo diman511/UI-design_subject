@@ -8,22 +8,22 @@
 <body>
 <div class="add-student">
   <header class="add-student__header"><h1>Добавление выпускника</h1></header>
-  <main class="add-student__content">
+  <form class="add-student__content" action="">
     <label for="surnameSpace">Фамилия:</label>
-    <input id="surnameSpace" placeholder="" type="text" autocomplete="off">
+    <input id="surnameSpace" required placeholder="" type="text" autocomplete="off">
     <label for="nameSpace">Имя:</label>
-    <input id="nameSpace" type="text" autocomplete="off">
+    <input id="nameSpace" required type="text" autocomplete="off">
     <label for="patronymicSpace">Отчество:</label>
-    <input id="patronymicSpace" placeholder="" type="text" autocomplete="off">
+    <input id="patronymicSpace" required placeholder="" type="text" autocomplete="off">
     <label for="studyingDirSpace">Напрвление подготовки:</label>
-    <input id="studyingDirSpace" placeholder="" type="text" autocomplete="off">
+    <input id="studyingDirSpace" required placeholder="" type="text" autocomplete="off">
     <label for="durationStudyingSpace">Период обучения:</label>
-    <input id="durationStudyingSpace" placeholder="" type="text" autocomplete="off">
+    <input id="durationStudyingSpace" required placeholder="" type="text" autocomplete="off">
     <div class="buttons">
-      <button onclick="">Ок</button>
+      <button onclick="" type="submit">Ок</button>
       <button onclick="window.location.href='../studentList/studentList.html'">Отмена</button>
     </div>
-  </main>
+  </form>
 </div>
 </body>
 </html>
