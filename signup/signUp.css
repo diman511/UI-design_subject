@@ -6,9 +6,9 @@
     background: transparent;
 }
 body{
-    background: coral;
+    background: blueviolet;
 }
-.container{
+.sign-up-page{
     display: grid;
     background: antiquewhite;
     position: absolute;
@@ -19,16 +19,15 @@ body{
     grid-template-rows: 16% 79%;
     grid-row-gap: 5%;
     align-content: center;
-    /*justify-content: center;*/
 }
-.header{
+.sign-up-page__header{
     position: relative;
     width: 100%;
     background: darkorange;
     text-align: center;
     font-size: 3vmin;
 }
-.main{
+.sign-in-page__content{
     position: relative;
     display: grid;
     font-size: 4vmin;

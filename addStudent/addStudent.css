@@ -6,9 +6,9 @@
     background: transparent;
 }
 body{
-    background: coral;
+    background: blueviolet;
 }
-.container{
+.add-student{
     display: grid;
     background: antiquewhite;
     position: absolute;
@@ -19,17 +19,15 @@ body{
     grid-template-rows: 16% 79%;
     grid-row-gap: 5%;
     align-content: center;
-    /*justify-content: center;*/
 }
-.header{
+.add-student__header{
     position: relative;
     width: 100%;
-    top: 0;
     background: darkorange;
     text-align: center;
     font-size: 3vmin;
 }
-.main{
+.add-student__content{
     position: relative;
     display: grid;
     font-size: 4vmin;
@@ -38,30 +36,34 @@ body{
     grid-template-areas:
     "a b"
     "c d"
-    ". e";
+    "e f"
+    "g h"
+    "i j"
+    "k l";
     grid-row-gap: 7%;
     grid-column-gap: 5%;
     justify-content: center;
     background: lightgreen;
     width: 100%;
 }
-#loginSpace{
-    width: 25vw;
-    /*font-weight: 40000;*/
-}
-#loginSpace::placeholder{
-    color: #212529;
-    opacity: 0.4;
-}
-#passwordSpace{
+#surnameSpace{
     width: 25vw;
 }
-#passwordSpace::placeholder{
-    color: #212529;
-    opacity: 0.4;
+#nameSpace{
+    width: 25vw;
 }
+#patronymicSpace{
+    width: 25vw;
+}
+#studyingDirSpace{
+    width: 25vw;
+}
+#durationStudyingSpace{
+    width: 25vw;
+}
+
 .buttons{
-    grid-area: e;
+    grid-area: l;
     display: flex;
     justify-self: end;
     width: 17vw;
@@ -72,5 +74,6 @@ button{
     height: 6vh;
     background: lightseagreen;
     border-radius: 1000px;
+    font-weight: 400;
     font-size: 2vmin;
 }

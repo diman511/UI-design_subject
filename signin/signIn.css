@@ -1,0 +1,76 @@
+
+::selection{
+    background: transparent;
+}
+::-moz-selection{
+    background: transparent;
+}
+body{
+    background: blueviolet;
+}
+.sign-in-page{
+    display: grid;
+    background: antiquewhite;
+    position: absolute;
+    left: 5vw;
+    top: 5vh;
+    width: 90vw;
+    height: 90vh;
+    grid-template-rows: 16% 79%;
+    grid-row-gap: 5%;
+    align-content: center;
+    /*justify-content: center;*/
+}
+.sign-in-page__header{
+    position: relative;
+    width: 100%;
+    top: 0;
+    background: darkorange;
+    text-align: center;
+    font-size: 3vmin;
+}
+.sign-in-page__content{
+    position: relative;
+    display: grid;
+    font-size: 4vmin;
+    caret-color: transparent;
+    align-content: center;
+    grid-template-areas:
+    "a b"
+    "c d"
+    ". e";
+    grid-row-gap: 7%;
+    grid-column-gap: 5%;
+    justify-content: center;
+    background: lightgreen;
+    width: 100%;
+}
+#loginSpace{
+    width: 25vw;
+    /*font-weight: 40000;*/
+}
+#loginSpace::placeholder{
+    color: #212529;
+    opacity: 0.4;
+}
+#passwordSpace{
+    width: 25vw;
+}
+#passwordSpace::placeholder{
+    color: #212529;
+    opacity: 0.4;
+}
+.buttons{
+    grid-area: e;
+    display: flex;
+    justify-self: end;
+    width: 17vw;
+    justify-content: space-between;
+}
+button{
+    width: 8vw;
+    height: 6vh;
+    background: lightseagreen;
+    border-radius: 1000px;
+    font-size: 2vmin;
+}

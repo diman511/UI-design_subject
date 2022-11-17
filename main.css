@@ -1,5 +1,5 @@
 
-.container{
+.main-page{
     background: antiquewhite;
     position: absolute;
     height: 100vh;
@@ -9,7 +9,7 @@
     grid-template-rows: 20% 70% 8%;
     grid-row-gap: 1%;
 }
-.header{
+.main-page__header{
     display: flex;
     justify-content: end;
     background: #05b1b1;
@@ -30,13 +30,13 @@ button{
     background: #52339a;
     border-radius: 1000px;
 }
-.main{
+.main-page__content{
     text-align: start;
     background: darkorange;
     font-size: 3vmin;
     width:100%;
 }
-.footer{
+.main-page__footer{
     width: 100%;
     background: darkred;
     text-align: center;
