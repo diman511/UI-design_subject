@@ -76,3 +76,26 @@ button{
     border-radius: 1000px;
     font-size: 2vmin;
 }
+.alert-user {
+    position: absolute;
+    display: none;
+    bottom: 7vh;
+    left: 27vw;
+    padding: 20px;
+    background-color: red;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 1000px;
+}
+.close-button {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    transition: 0.5s;
+}
+.close-button:hover {
+    color: black;
+}

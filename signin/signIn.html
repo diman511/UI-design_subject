@@ -8,16 +8,21 @@
 <body>
     <div class="sign-in-page">
         <header class="sign-in-page__header"><h1>Вход на страницу</h1></header>
-        <form class="sign-in-page__content" action="">
+        <form class="sign-in-page__content" id="signIn-form" action="#">
             <label for="loginSpace">Логин:</label>
-            <input id="loginSpace" required placeholder="Логин, пожалуйста" type="text" autocomplete="off">
+            <input id="loginSpace" required name="userLogin" placeholder="Логин, пожалуйста" type="text" autocomplete="off">
             <label for="passwordSpace">Пароль:</label>
-            <input id="passwordSpace" required placeholder="Пароль, пожалуйста" type="password" autocomplete="off">
+            <input id="passwordSpace" required name="userPassword" placeholder="Пароль, пожалуйста" type="password" autocomplete="off">
             <div class="buttons">
-                <button onclick="" type="submit">Ок</button>
+                <button type="submit">Ок</button>
                 <button onclick="window.location.href='../index.html'">Отмена</button>
             </div>
         </form>
     </div>
+    <div class="alert-user">
+        <span class="close-button" onclick="this.parentElement.style.display='none';">&times;</span>
+        Не верный логин или пароль и сам думай, логин или пароль, а может такого пользователя вообще нет
+    </div>
+    <script src="signIn.js"></script>
 </body>
 </html>
