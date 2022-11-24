@@ -15,7 +15,7 @@ signUpForm.onsubmit = function(event) {
         }
         localStorage.setItem(userKey, newLogin);
         localStorage.setItem(newLogin, newPassword);
-        window.location.href='../studentList/studentList.html'
+        window.location.href='../studentList/studentList.html';
     }
     else{
         let alertElem = document.querySelector(".alert-password");
