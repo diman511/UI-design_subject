@@ -32,7 +32,7 @@ th{
     background: #05b1b1;
 }
 .student-list__table-content{
-    background: lightgreen;
+    background: bisque;
 }
 .student-list-footer{
     position: fixed;
@@ -52,4 +52,11 @@ button{
     border-radius: 1000px;
     background: gold;
     /*margin: 0 2vw 0 0 ;*/
+}
+#field{
+    width:100%;
+    height: 4vh;
+    background: crimson;
+    text-align: center;
+    border-radius: 9px;
 }
