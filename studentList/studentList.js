@@ -55,8 +55,11 @@ const studentList = [];
 dataBase.onupgradeneeded = function(event) {
     console.log('Open db --- onupgradeneeded');
     let db = event.target.result;
-    if(!db.objectStoreNames.contains("students")) {
+    if (!db.objectStoreNames.contains("students")) {
         db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
+    }
+    if (!db.objectStoreNames.contains("characteristic")) {
+        db.createObjectStore("characteristic", {keyPath: "id", autoIncrement: true});
     }
 };
 dataBase.onerror = function (event) {

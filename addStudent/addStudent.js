@@ -2,7 +2,6 @@
 const studentForm = document.getElementById('add-student__content')
 studentForm.onsubmit = function(event) {
     event.preventDefault();
-    console.log("huita");
     let db;
     let studentDB = window.indexedDB.open("StudentDB", 1);
     let surname = studentForm.querySelector('[name="studentSurname"]').value;
