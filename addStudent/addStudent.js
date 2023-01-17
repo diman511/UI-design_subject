@@ -2,8 +2,9 @@
 const studentForm = document.getElementById('add-student__content')
 studentForm.onsubmit = function(event) {
     event.preventDefault();
+    console.log("huita");
     let db;
-    let studentDB = window.indexedDB.open("StudentDB", 2);
+    let studentDB = window.indexedDB.open("StudentDB", 1);
     let surname = studentForm.querySelector('[name="studentSurname"]').value;
     let name = studentForm.querySelector('[name="studentName"]').value;
     let patronymic = studentForm.querySelector('[name="studentPatronymic"]').value;
@@ -16,6 +17,14 @@ studentForm.onsubmit = function(event) {
         direction: direction,
         duration: duration
     };
+    studentDB.onupgradeneeded = function(event) {
+        console.log('Open db --- onupgradeneeded');
+        db = event.target.result;
+
+        if(!db.objectStoreNames.contains("students")) {
+            db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
+        }
+    };
     studentDB.onerror = function(event) {
         window.location.href='../studentList/studentList.html';
         alert("DataBase error on code: " + event.target.errorCode);
@@ -23,6 +32,7 @@ studentForm.onsubmit = function(event) {
     studentDB.onsuccess = function(event) {
         console.log('Open db --- onsuccess');
         db = event.target.result;
+        console.log(db.objectStoreNames.contains("students"));
         if(!db.objectStoreNames.contains("students")) {
             db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
         }
@@ -37,14 +47,6 @@ studentForm.onsubmit = function(event) {
         }
         request.onerror = function(event) {
             console.log('Какаято ашибка', event.target.error);
-        }
-    };
-    studentDB.onupgradeneeded = function(event) {
-        console.log('Open db --- onupgradeneeded');
-        db = event.target.result;
-
-        if(!db.objectStoreNames.contains("students")) {
-            db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
         }
     };
     window.location.href='../studentList/studentList.html';
