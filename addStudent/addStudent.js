@@ -31,7 +31,6 @@ studentForm.onsubmit = function(event) {
     studentDB.onsuccess = function(event) {
         console.log('Open db --- onsuccess');
         db = event.target.result;
-        console.log(db.objectStoreNames.contains("students"));
         if(!db.objectStoreNames.contains("students")) {
             db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
         }
