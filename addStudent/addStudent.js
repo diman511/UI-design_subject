@@ -47,5 +47,5 @@ studentForm.onsubmit = function(event) {
             console.log('Какаято ашибка', event.target.error);
         }
     };
-    window.location.href='../studentList/studentList.html';
+    window.location.href='../addCharacteristic/addCharacteristic.html';
 }
