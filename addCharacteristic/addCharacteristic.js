@@ -1,4 +1,10 @@
 
+let pressedButton;
+function whichButtonPressed(number){
+    if (number == 1) pressedButton = 'continue';
+    else pressedButton = 'exit';
+}
+
 const characteristicForm = document.getElementById('add-characteristic__content')
 characteristicForm.onsubmit = function(event) {
     event.preventDefault();
@@ -7,8 +13,6 @@ characteristicForm.onsubmit = function(event) {
     let subject = characteristicForm.querySelector('[id="subjectSpace"]').value;
     let mark = characteristicForm.querySelector('[id="markSpace"]').value;
     let description = characteristicForm.querySelector('[id="descriptionSpace"]').value;
-    console.log(characteristicForm.querySelector('[name="button"]').value);
-    let pressedButton = characteristicForm.querySelector('[name="button"]').value;
 
     studentDB.onupgradeneeded = function(event) {
         console.log('Open db --- onupgradeneeded');
@@ -29,16 +33,19 @@ characteristicForm.onsubmit = function(event) {
             db.createObjectStore("characteristic", {keyPath: "id", autoIncrement: true});
         }
 
+        let numberOfStudent;
         let store = db.transaction('students', 'readonly').objectStore('students');
-        let numberOfStudent = store.getAll();
+        store.getAllKeys().onsuccess = function (event) {
+            numberOfStudent = event.target.result;
+            console.log(numberOfStudent);
+        }
+        console.log(numberOfStudent);
         let studentCharacteristic = {
-            student: numberOfStudent.length,
+            studentID: numberOfStudent.length,
             subject: subject,
             mark: mark,
             description: description
         };
-        console.log(numberOfStudent.request.result.length);
-
         let transaction = db.transaction('characteristic', 'readwrite');
         let adding = transaction.objectStore('characteristic');
 
@@ -50,10 +57,11 @@ characteristicForm.onsubmit = function(event) {
             console.log('Какаято ашибка', event.target.error);
         }
     };
-    if (pressedButton == 'exit') {
-        window.location.href = '../studentList/studentList.html';
-    }
-    else {
+    //
+    // if (pressedButton == 'exit') {
+    //     window.location.href = '../studentList/studentList.html';
+    // }
+    // else {
         // location.reload();
-    }
+    // }
 }
