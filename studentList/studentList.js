@@ -56,7 +56,8 @@ dataBase.onupgradeneeded = function(event) {
     console.log('Open db --- onupgradeneeded');
     let db = event.target.result;
     if (!db.objectStoreNames.contains("students")) {
-        db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
+        let student = db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
+        let index = student.createIndex('student_ind', 'id');
     }
     if (!db.objectStoreNames.contains("characteristic")) {
         db.createObjectStore("characteristic", {keyPath: "id", autoIncrement: true});

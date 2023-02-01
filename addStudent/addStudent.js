@@ -21,7 +21,8 @@ studentForm.onsubmit = function(event) {
         db = event.target.result;
 
         if(!db.objectStoreNames.contains("students")) {
-            db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
+            let student = db.createObjectStore("students", {keyPath: "id", autoIncrement: true});
+            let index = student.createIndex('student_ind', 'id');
         }
     };
     studentDB.onerror = function(event) {

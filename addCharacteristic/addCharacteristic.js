@@ -33,35 +33,36 @@ characteristicForm.onsubmit = function(event) {
             db.createObjectStore("characteristic", {keyPath: "id", autoIncrement: true});
         }
 
-        let numberOfStudent;
+        let studentCharacteristic;
         let store = db.transaction('students', 'readonly').objectStore('students');
-        store.getAllKeys().onsuccess = function (event) {
-            numberOfStudent = event.target.result;
-            console.log(numberOfStudent);
-        }
-        console.log(numberOfStudent);
-        let studentCharacteristic = {
-            studentID: numberOfStudent.length,
-            subject: subject,
-            mark: mark,
-            description: description
-        };
-        let transaction = db.transaction('characteristic', 'readwrite');
-        let adding = transaction.objectStore('characteristic');
+        let studentIndex = store.index('student_ind');
+        let newRequest = studentIndex.getAll();
+        newRequest.onsuccess = function() {
+            let result = newRequest.result;
+            console.log(result);
+            studentCharacteristic = {
+                studentID: result.length,
+                subject: subject,
+                mark: mark,
+                description: description
+            };
+            let transaction = db.transaction('characteristic', 'readwrite');
+            let adding = transaction.objectStore('characteristic');
 
-        let request = adding.add(studentCharacteristic);
-        request.onsuccess = function() {
-            console.log('Запись успешна');
-        }
-        request.onerror = function(event) {
-            console.log('Какаято ашибка', event.target.error);
-        }
+            let request = adding.add(studentCharacteristic);
+            request.onsuccess = function() {
+                console.log('Запись успешна');
+            }
+            request.onerror = function(event) {
+                console.log('Какаято ашибка', event.target.error);
+            }
+        };
     };
-    //
-    // if (pressedButton == 'exit') {
-    //     window.location.href = '../studentList/studentList.html';
-    // }
-    // else {
-        // location.reload();
-    // }
+
+    if (pressedButton == 'exit') {
+        window.location.href = '../studentList/studentList.html';
+    }
+    else {
+        location.reload();
+    }
 }
